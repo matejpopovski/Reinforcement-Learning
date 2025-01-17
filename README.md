@@ -3,7 +3,7 @@
 This project focuses on creating a reinforcement learning (RL) model that learns how to play the Snake game. The model uses deep Q-learning (DQN) to learn optimal actions based on the state of the game. The ultimate goal of the project is to create an AI agent capable of playing Snake by continuously improving its performance through self-play.
 
 
-[![Click to Watch the Video](https://user-images.githubusercontent.com/your-user-id/video-thumbnail.png)](https://github.com/matejpopovski/Reinforcement-Learning/blob/main/images/Screen_Recording.mp4)
+[![Click to Watch the Video](https://user-images.githubusercontent.com/your-user-id/video-thumbnail.png)](https://github.com/matejpopovski/Reinforcement-Learning/blob/main/images/ScreenRecording.mp4)
 
 ## Project Overview
 
