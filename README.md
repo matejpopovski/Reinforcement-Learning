@@ -1,156 +1,55 @@
-# Snake Game with AI and Human Playable Version
+# Snake Game with Reinforcement Learning
 
-Welcome to the **Snake Game Project**! This repository contains two versions of the classic Snake game:
+This project focuses on creating a reinforcement learning (RL) model that learns how to play the Snake game. The model uses deep Q-learning (DQN) to learn optimal actions based on the state of the game. The ultimate goal of the project is to create an AI agent capable of playing Snake by continuously improving its performance through self-play.
 
-1. **Human Playable Version** - Play the game yourself using arrow keys.
-2. **AI-Powered Version** - An AI trains itself to play the game using reinforcement learning.
+## Project Overview
 
-Additionally, this project includes visualizations of the AI training process and supplementary media to demonstrate the game.
+In this project, I implemented a **Reinforcement Learning (RL) model** using the following components:
+- **Deep Q-Learning Network (DQN)**: A neural network is used to predict the Q-values for various actions the agent can take in each state.
+- **Snake Game Environment**: The game environment is modeled where the agent (snake) takes actions, receives rewards, and learns over time.
+- **Training Process**: The RL model is trained over a series of episodes, during which it explores and refines its strategy to maximize the cumulative reward.
 
----
+## Key Features
 
-## Features
+- **Deep Q-Network (DQN)**: The agent uses a neural network to estimate the action-value function for state-action pairs.
+- **Replay Memory**: The model stores previous experiences in a replay memory buffer to sample mini-batches for training.
+- **Epsilon-Greedy Exploration**: The agent balances exploration and exploitation using an epsilon-greedy policy, where it occasionally explores random actions.
+- **Target Network**: A target network is used to stabilize training by updating periodically.
 
-### 1. Human Playable Version
+## Project Components
 
-The traditional Snake game implemented using Python and Pygame:
+### 1. **Reinforcement Learning Model**
 
-- **Simple Controls**: Use arrow keys to move the snake.
-- **Dynamic Gameplay**: The snake grows and the game speeds up as you progress.
-- **Collision Detection**: Ends the game when the snake hits a wall or itself.
-- **Score Tracking**: Your score is displayed in real-time.
+The RL model is built using PyTorch. The model consists of a simple feed-forward neural network (Linear_QNet) that takes the current state of the game as input and outputs Q-values for possible actions. The model is trained using the Q-learning algorithm.
 
-### 2. AI-Powered Version
+### 2. **QTrainer Class**
 
-This version leverages **Deep Q-Learning** to train an AI to play Snake:
+The `QTrainer` class handles the training process by calculating the loss between the predicted Q-values and the target Q-values, then updating the model's weights using backpropagation.
 
-- **Neural Network Architecture**:
-  - Input Layer: Game state representation.
-  - Hidden Layer: Processes the state.
-  - Output Layer: Predicts the best move.
-- **Training Process**:
-  - Rewards for collecting food and penalties for collisions.
-  - Updates Q-values using the Bellman equation.
-- **Dynamic Visualizations**:
-  - Training progress is plotted in real-time to track scores and performance.
+### 3. **Snake Game Environment**
 
-### 3. Supplementary Media
+The game environment is built using the `pygame` library. The snake navigates the environment, eats food, grows, and tries to avoid collisions with itself or the walls.
 
-- **Screenshots**: Captures of the gameplay experience.
-- **Video Demonstration**: A walkthrough of the game in action.
+### 4. **Progress Tracking**
 
----
+A custom progress tracking system is implemented using `matplotlib` to visualize the agent’s performance over time. This allows monitoring of both the current score and the average score over the course of training.
 
-## Installation
+### 5. **Human Playable Version**
+
+In addition to the RL agent, I also implemented a **human-playable version** of the game using `pygame`. Players can control the snake using the arrow keys and try to achieve the highest score while avoiding collisions.
+
+## File Structure
+
+- `snake_game.py`: Main script for the RL model and the snake game environment.
+- `dqn_model.py`: Contains the definition of the `Linear_QNet` model and `QTrainer` class.
+- `progress_tracking.py`: A script for visualizing the agent's training progress.
+- `human_playable.py`: Implements the human-playable version of the Snake game.
+
+## Getting Started
 
 ### Prerequisites
 
-- Python 3.8+
-- Required libraries:
-  - `pygame`
-  - `torch`
-  - `matplotlib`
-
-Install the dependencies using pip:
+Make sure you have the following libraries installed:
 
 ```bash
-pip install pygame torch matplotlib
-```
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/your-repo-name/snake-game.git
-cd snake-game
-```
-
----
-
-## How to Run
-
-### Human Playable Version
-
-1. Navigate to the project directory.
-2. Run the `human_snake_game.py` file:
-   ```bash
-   python human_snake_game.py
-   ```
-3. Use the arrow keys to control the snake and enjoy the game.
-
-### AI-Powered Version
-
-1. Run the `ai_snake_game.py` file:
-   ```bash
-   python ai_snake_game.py
-   ```
-2. Observe the training progress and watch the AI improve over time.
-
----
-
-## Media
-
-### Screenshots
-
-Below are some snapshots of the game:
-
-- **Game Start**:
-
-  ![Game Start](Screenshot1.png)
-
-- **Mid-Game**:
-
-  ![Mid-Game](Screenshot2.png)
-
-- **Game Over**:
-
-  ![Game Over](Screenshot3.png)
-
-### Video Demonstration
-
-Watch the full gameplay demonstration here:
-
-[Gameplay Video](Screen%20Recording.mov)
-
----
-
-## Project Structure
-
-```plaintext
-snake-game/
-|-- ai_snake_game.py        # AI-powered version of Snake
-|-- human_snake_game.py     # Human playable version
-|-- model/                  # Saved AI model
-|-- README.md               # Project documentation
-|-- requirements.txt        # List of dependencies
-|-- Screenshot1.png         # Gameplay screenshot 1
-|-- Screenshot2.png         # Gameplay screenshot 2
-|-- Screenshot3.png         # Gameplay screenshot 3
-|-- Screen Recording.mov    # Gameplay video demonstration
-```
-
----
-
-## Acknowledgments
-
-This project was developed using:
-
-- **Pygame** for the human-playable version.
-- **PyTorch** for implementing the deep learning model.
-- **Matplotlib** for visualizing training progress.
-
----
-
-## License
-
-This project is licensed under the MIT License. Feel free to use and modify it as you see fit.
-
----
-
-## Contact
-
-For questions or suggestions, please reach out:
-
-- **Author**: Matej Popovski
-- **Email**: [matejpopovski@example.com](mailto:matejpopovski@example.com)
-
-Enjoy the game!
+pip install torch pygame matplotlib
