@@ -5,6 +5,10 @@ This project focuses on creating a reinforcement learning (RL) model that learns
 
 [![Click to Watch the Video](https://user-images.githubusercontent.com/your-user-id/video-thumbnail.png)](https://github.com/matejpopovski/Reinforcement-Learning/blob/main/images/ScreenRecording.mp4)
 
+
+[![Click to Watch the Video](https://github.com/matejpopovski/Reinforcement-Learning/raw/main/images/video-thumbnail.png)](https://github.com/matejpopovski/Reinforcement-Learning/raw/main/images/ScreenRecording.mp4)
+
+
 ## Project Overview
 
 In this project, I implemented a **Reinforcement Learning (RL) model** using the following components:
