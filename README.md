@@ -51,11 +51,4 @@ In addition to the RL agent, I also implemented a **human-playable version** of 
 - `progress_tracking.py`: A script for visualizing the agent's training progress.
 - `human_playable.py`: Implements the human-playable version of the Snake game.
 
-## Getting Started
 
-### Prerequisites
-
-Make sure you have the following libraries installed:
-
-```bash
-pip install torch pygame matplotlib
