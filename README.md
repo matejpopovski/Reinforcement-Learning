@@ -15,6 +15,18 @@ In this project, I implemented a **Reinforcement Learning (RL) model** using the
 - **Snake Game Environment**: The game environment is modeled where the agent (snake) takes actions, receives rewards, and learns over time.
 - **Training Process**: The RL model is trained over a series of episodes, during which it explores and refines its strategy to maximize the cumulative reward.
 
+<table style="border-collapse: separate; border-spacing: 20px;">
+    <tr>
+        <td><img src="images/Screenshot1.png" alt="Screenshot 1" width="350"/></td>
+        <td><img src="images/Screenshot4.png" alt="Screenshot 2" width="350"/></td>
+    </tr>
+    <tr>
+        <td><img src="images/Screenshot2.png" alt="Screenshot 3" width="350"/></td>
+        <td><img src="images/Screenshot3.png" alt="Screenshot 4" width="350"/></td>
+    </tr>
+</table>
+
+
 ## Key Features
 
 - **Deep Q-Network (DQN)**: The agent uses a neural network to estimate the action-value function for state-action pairs.
