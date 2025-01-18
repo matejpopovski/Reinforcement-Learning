@@ -26,6 +26,9 @@ In this project, I implemented a **Reinforcement Learning (RL) model** using the
     </tr>
 </table>
 
+## Learning Progress and Challenges
+
+After around 100 iterations, the algorithm learns to avoid hitting the wall or itself and focuses on eating the apples, transitioning from making random decisions at the beginning to making moves based on reinforcement learning conclusions; however, it may occasionally get stuck in a loop or a self-collision scenario, which it will eventually learn to avoid if trained for a longer period.
 
 ## Key Features
 
