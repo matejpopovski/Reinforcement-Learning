@@ -1,4 +1,4 @@
-# Snake Game with Reinforcement Learning       
+# Snake Game with Reinforcement Learning        
 
 This project focuses on creating a reinforcement learning (RL) model that learns how to play the Snake game. The model uses deep Q-learning (DQN) to learn optimal actions based on the state of the game. The ultimate goal of the project is to create an AI agent capable of playing Snake by continuously improving its performance through self-play. 
 
